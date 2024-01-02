@@ -5,6 +5,7 @@
 	  <LangVersion>latest</LangVersion>
 	  <TargetFramework>netstandard2.1</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
 	  <Authors>Chief Monk</Authors>
 	  <Version>1.0.2</Version>
@@ -18,9 +19,11 @@
 	  <NoWarn>$(NoWarn);CS1591</NoWarn>
 	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	  <PackageIcon>icon.png</PackageIcon>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 	<ItemGroup>
 		<!-- Add a LICENSE.txt next to the csproj -->
+		<None Include="../../README.md" Pack="true" PackagePath=""/>
 		<None Include="../../LICENSE" Pack="true" PackagePath=""/>
 		<None Include="../../art/icon.png" Pack="true" PackagePath=""/>
 	</ItemGroup>
