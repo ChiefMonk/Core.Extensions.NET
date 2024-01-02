@@ -16,6 +16,7 @@
 	<PropertyGroup>
 		<Authors>Chief Monk</Authors>
 		<Description>A long description to explain the package</Description>
+		<Company>https://github.com/chiefmonk</Company>
 
 		<!-- PackageProjectUrl is different from the repository URL. It can be a documentation
          website or a website explaining the project -->
