@@ -23,9 +23,9 @@
   </PropertyGroup>
 	<ItemGroup>
 		<!-- Add a LICENSE.txt next to the csproj -->
-		<None Include="../../README.md" Pack="true" PackagePath=""/>
-		<None Include="../../LICENSE" Pack="true" PackagePath=""/>
-		<None Include="../../art/icon.png" Pack="true" PackagePath=""/>
+		<None Include="../../README.md" Pack="true" PackagePath="" />
+		<None Include="../../LICENSE" Pack="true" PackagePath="" />
+		<None Include="../../art/icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 	<ItemGroup>
