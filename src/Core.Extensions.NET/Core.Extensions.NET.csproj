@@ -1,38 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+	  <PackageId>Core.Extensions.NET</PackageId>
+		<TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+	  <Authors>Chief Monk</Authors>
+	  <Version>1.0.2</Version>
+	  <Company>https://github.com/chiefmonk</Company>
+	  <Description>A long description to explain the package</Description>
+	  <PackageProjectUrl>https://github.com/chiefmonk/core.extensions.net</PackageProjectUrl>
+	  <PackageTags>.NET, Extensions</PackageTags>
+	  <EnablePackageValidation>true</EnablePackageValidation>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <!-- If all members are not documented, you can disable the compiler warnings -->
+	  <NoWarn>$(NoWarn);CS1591</NoWarn>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
-
-	<PropertyGroup>
-		<EnablePackageValidation>true</EnablePackageValidation>
-		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<!-- If all members are not documented, you can disable the compiler warnings -->
-		<NoWarn>$(NoWarn);CS1591</NoWarn>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<Authors>Chief Monk</Authors>
-		<Description>A long description to explain the package</Description>
-		<Company>https://github.com/chiefmonk</Company>
-		<Version>1.0.2</Version>
-
-		<!-- PackageProjectUrl is different from the repository URL. It can be a documentation
-         website or a website explaining the project -->
-		<PackageProjectUrl>https://github.com/chiefmonk/core.extensions.net</PackageProjectUrl>
-
-		<!-- A list of tags to help the search engine to understand the content of the package -->
-		<PackageTags>.NET, Extensions</PackageTags>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageIcon>icon.png</PackageIcon>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<!-- Add a LICENSE.txt next to the csproj -->
 		<None Include="../../LICENSE" Pack="true" PackagePath=""/>
