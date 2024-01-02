@@ -16,7 +16,6 @@ on:
 env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: true
-  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   NuGetDirectory: ${{ github.workspace}}/nuget
 
 defaults:
@@ -26,11 +25,7 @@ defaults:
 jobs:
   create_nuget:
     runs-on: ubuntu-latest
-    steps:
-    - name: Set package version
-      run: echo "::set-env name=PACKAGE_VERSION::$(date +'%Y-%m-%d')"
-      env:
-        PACKAGE_VERSION: ${{ env.PACKAGE_VERSION }}
+    steps:    
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
