@@ -3,16 +3,16 @@
   <PropertyGroup>
 	  <PackageId>Core.Extensions.NET</PackageId>
 	  <LangVersion>latest</LangVersion>
-	  <TargetFramework>net8.0</TargetFramework>
+	  <TargetFramework>net8.0;netstandard2.1</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
 	  <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
 	  <Authors>Chief Monk</Authors>
-	  <Version>1.0.3</Version>
+	  <Version>1.0.1</Version>
 	  <Company>https://github.com/chiefmonk</Company>
 	  <Description>The most common and used .NET Extensions</Description>
 	  <PackageProjectUrl>https://github.com/chiefmonk/core.extensions.net</PackageProjectUrl>
-	  <PackageTags>.NET, Extensions</PackageTags>
+	  <PackageTags>.NET, .NETCore, Extensions</PackageTags>
 	  <EnablePackageValidation>true</EnablePackageValidation>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	  <!-- If all members are not documented, you can disable the compiler warnings -->
