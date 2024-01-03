@@ -78,6 +78,25 @@ jobs:
     - name: Run tests
       run: dotnet test tests/Core.Extensions.NET.Test/Core.Extensions.NET.Test.csproj --configuration Release
 
+  create_release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.NUGETAPIKEY }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          Changes in this Release
+          - First Change
+          - Second Change
+        draft: false
+        prerelease: false
+
   deploy:
     # Publish only when creating a GitHub Release
     # https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
@@ -85,7 +104,7 @@ jobs:
     # if: github.event_name == 'release'
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    needs: [ validate_nuget, run_test ]
+    needs: [ create_release, validate_nuget, run_test ]
     steps:
       # Download the NuGet package created in the previous job
       - uses: actions/download-artifact@v3
