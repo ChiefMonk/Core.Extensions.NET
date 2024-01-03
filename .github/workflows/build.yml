@@ -25,7 +25,7 @@ defaults:
 jobs:
   create_nuget:
     runs-on: ubuntu-latest
-    steps:    
+    steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
@@ -34,7 +34,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
 
-    # Create the NuGet package in the folder from the environment variable NuGetDirectory   
+    # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: dotnet pack src/Core.Extensions.NET/Core.Extensions.NET.csproj --configuration Release --output ${{ env.NuGetDirectory }}
 
     # Publish the NuGet package as an artifact, so they can be used in the following jobs
@@ -76,7 +76,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
     - name: Run tests
-      run: dotnet test tests/Core.Extensions.NET.Test/Core.Extensions.NET.Test.csproj  --configuration Release
+      run: dotnet test tests/Core.Extensions.NET.Test/Core.Extensions.NET.Test.csproj --configuration Release
 
   deploy:
     # Publish only when creating a GitHub Release

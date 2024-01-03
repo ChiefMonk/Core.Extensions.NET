@@ -10,7 +10,7 @@
 	  <Authors>Chief Monk</Authors>
 	  <Version>1.0.3</Version>
 	  <Company>https://github.com/chiefmonk</Company>
-	  <Description>A long description to explain the package</Description>
+	  <Description>The most common and used .NET Extensions</Description>
 	  <PackageProjectUrl>https://github.com/chiefmonk/core.extensions.net</PackageProjectUrl>
 	  <PackageTags>.NET, Extensions</PackageTags>
 	  <EnablePackageValidation>true</EnablePackageValidation>
@@ -21,6 +21,7 @@
 	  <PackageIcon>icon.png</PackageIcon>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
 	<ItemGroup>
 		<!-- Add a LICENSE.txt next to the csproj -->
 		<None Include="../../README.md" Pack="true" PackagePath="" />
